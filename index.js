@@ -250,8 +250,8 @@ function stringSmash(strings) {
 function getFullNames(runners) {
  const run = runners.map(function(name){
     return `${runners.last_name} , ${runners.first_name}`;
-  })
- 
+  });
+ return run;
 }
 
 /**
@@ -267,9 +267,10 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
-  runners.map(function(caps){
+ const xyz = runners.map(function(caps){
     return runners.first_name.toUpperCase + runners.last_name.toUpperCase
-  })
+  });
+  return xyz;
 }
 
 /**
@@ -286,8 +287,11 @@ function firstNamesAllCaps(runners) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  const running = runners.filter(function(run){
+    return runners.first_name === runners.shirt_size;
+  });
+  return running;
 }
 
 /**
