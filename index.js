@@ -247,9 +247,16 @@ function stringSmash(strings) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
+// function getFullNames(runners) {
+//   /* CODE HERE */
+//   return runners.map(runner => {
+//     return `${runner.last_name}, ${runner.first_name}`;
+//   });
+// }
+
 function getFullNames(runners) {
  const run = runners.map(function(name){
-    return `${runners.last_name} , ${runners.first_name}`;
+    return `${name.last_name}, ${name.first_name}`;
   });
  return run;
 }
@@ -267,8 +274,8 @@ function getFullNames(runners) {
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
 function firstNamesAllCaps(runners) {
- const xyz = runners.map(function(caps){
-    return runners.first_name.toUpperCase + runners.last_name.toUpperCase
+  const xyz = runners.map(function(caps) {
+    return caps.first_name.toUpperCase();
   });
   return xyz;
 }
@@ -289,7 +296,7 @@ function firstNamesAllCaps(runners) {
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
   const running = runners.filter(function(run){
-    return runners.first_name === runners.shirt_size;
+    return run.first_name === run.shirt_size;
   });
   return running;
 }
